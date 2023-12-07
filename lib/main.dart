@@ -12,7 +12,7 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   await CacheHelper.init();
 
-  bool isDark = CacheHelper.getData(key: 'isDark');
+  bool isDark = CacheHelper.getData(key: 'isDark') ?? false;
   runApp(MyApp(
     isDark: isDark,
   ));
